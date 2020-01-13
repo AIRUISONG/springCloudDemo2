@@ -1,0 +1,11 @@
+server:
+  port: 8081
+eureka:
+  client:
+    register-with-eureka: false  #是否将当前的 Eureka Server 服务作为客户端进⾏注册。
+    fetch-registry: false  #是否获取其他 Eureka Server 服务的数据。
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/   #注册中⼼的访问地址
+spring:
+  application:
+    name: EurekaServer  #服务名

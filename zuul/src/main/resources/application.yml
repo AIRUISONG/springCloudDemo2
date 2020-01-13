@@ -1,0 +1,13 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+zuul:
+  routes:
+    eurekaClient: /client/**   #对应服务名的访问别名  （eurekaClient微服务的访问）
+    consumer: /consumer/**    #对应服务名的访问别名  （consumer）
